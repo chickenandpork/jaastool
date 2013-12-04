@@ -1,0 +1,7 @@
+Makefile
+getopt.jar
+java-getopt-1.0.13.jar
+
+# http://www.gnu.org/software/automake
+
+Makefile.in

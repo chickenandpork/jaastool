@@ -1,0 +1,11 @@
+# configure
+
+Makefile
+atconfig
+atlocal
+testsuite
+testsuite.at
+
+# http://www.gnu.org/software/automake
+
+Makefile.in

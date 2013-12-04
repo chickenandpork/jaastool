@@ -1,0 +1,8 @@
+Makefile
+jaastool.jar
+bld
+
+# http://www.gnu.org/software/automake
+
+Makefile.in
+

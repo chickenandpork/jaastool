@@ -1,3 +1,14 @@
+# configure
+
+Doxyfile
+htdocs
+Makefile
+config.guess
+config.log
+config.status
+config.sub
+
+
 # http://www.gnu.org/software/automake
 
 Makefile.in
