@@ -8,7 +8,8 @@ SUBDIRS += java
 SUBDIRS += convjars
 endif
 
-# always after any testa and afver conv(enience)jars: need to test that the convjars work in isolation
+# always after any builds and after conv(enience)jars: need to test that the convjars work in isolation
+# this, plus no local derived content, means that all builds are tested (local $top_srcdir content would rebuild after tests)
 if DO_AUTOTEST
 SUBDIRS +=	tests-autotest
 endif
