@@ -3,10 +3,8 @@ SUBDIRS =	depjars
 
 if DO_JAVA
 SUBDIRS += java
-endif
 
 # always must be after any java dirs -- acts as a collector
-if DO_JAVA
 SUBDIRS += convjars
 endif
 

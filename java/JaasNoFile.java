@@ -155,10 +155,23 @@ public class JaasNoFile
         }
     }
 
+
+    /** usage messages are useful to those of us with short memories as well (hey, I just need to add swap!) */
     public void usage(String proc)
     {
-        System.out.println("Sadly, I have yet neglected to provide a usage output");
+        System.out.println("Usage: "+proc+" -V|--version|-H|--help");
+
+        System.out.println("     : "+proc+" [--debug|-D] [--verbose|-v] [--env|-E] [--fudgekdc|-f] [--fudgerealm|-F] ...");
+        System.out.println("     : "+proc+" [--processname|-n] (defaults to \"client\")");
+        System.out.println("     : "+proc+" [options] [--kdc|--server|-s <kdc/AD server>] [--realm|--domain|-d|-r <realm or domain>] [--principal|-u <username or principal@realm>]");
+        System.out.println("   ie: "+proc+" -D -v -E");
+        System.out.println("   ie: "+proc+" -DvE -u allan.clark -s dc01.example.com -d EXAMPLE.COM");
+        System.out.println("   ie: "+proc+" -DvE --princpal=allan.clark --server=dc01.example.com --domain=EXAMPLE.COM");
+        System.out.println("\n       "+proc+" will try all permutations of {principal}{domain}{server}");
+        System.out.println("       "+proc+" -E gives two KDCs, one principal, and one realm, so 2 passwords will be prompted");
+        System.out.println("       "+proc+" -DvE -u allan.clark -s dc01.example.com -d EXAMPLE.COM provides (2u x 3s x 2r) 12 combinations");
     }
+
 
     public static void main(String[] args) throws Exception
     {
@@ -174,7 +187,8 @@ public class JaasNoFile
         options.add(new LongOpt("server", LongOpt.REQUIRED_ARGUMENT, null, 's'));
         options.add(new LongOpt("domain", LongOpt.REQUIRED_ARGUMENT, null, 'd'));
         options.add(new LongOpt("env", LongOpt.NO_ARGUMENT, null, 'E'));
-        options.add(new LongOpt("fudge", LongOpt.NO_ARGUMENT, null, 'F'));
+        options.add(new LongOpt("fudgekdc", LongOpt.NO_ARGUMENT, null, 'f'));
+        options.add(new LongOpt("fudgerealm", LongOpt.NO_ARGUMENT, null, 'F'));
         options.add(new LongOpt("debug", LongOpt.NO_ARGUMENT, null, 'D'));
         options.add(new LongOpt("verbose", LongOpt.NO_ARGUMENT, null, 'v'));
         options.add(new LongOpt("realm", LongOpt.REQUIRED_ARGUMENT, null, 'r'));
@@ -276,7 +290,7 @@ public class JaasNoFile
             case 'H':
                 //new JaasNoFile().usage(g.progname());
                 new JaasNoFile().usage("jaastool");
-                break;
+                return;
             }
         }
 
