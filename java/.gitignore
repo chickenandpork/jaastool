@@ -1,6 +1,9 @@
 Makefile
-jaastool.jar
 bld
+classnodist_pkgdata.stamp
+jaastool.class
+jaastool.jar
+javaroot.stamp
 
 # http://www.gnu.org/software/automake
 

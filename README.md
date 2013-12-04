@@ -1,4 +1,4 @@
 jaastool
 ========
 
-JAAS Tools used to diagnosing opaque issues
+JAAS Tools used to aid diagnosing opaque issues
