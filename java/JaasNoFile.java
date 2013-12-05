@@ -2,6 +2,19 @@ package org.smallfoot.jaas;
 
 /*
  * @file
+ *
+ * related content for when I resume working on the non-eloquent part:
+ * o http://www.massapi.com/source/gpd-3.3.1-r3035/gpd/plugins/org.jbpm.ui/src/org/jbpm/ui/sync/KerberosLoginConfiguration.java.html
+ * o http://www.massapi.com/class/ap/AppConfigurationEntry.html
+ * o https://wiki.debian.org/LDAP/Kerberos
+ * o http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/6-b14/sun/security/krb5/Config.java#Config.getInstance%28%29
+ * o http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/7-b147/com/sun/security/auth/module/Krb5LoginModule.java/
+ * o http://docs.oracle.com/javase/7/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html
+ * o http://docs.oracle.com/javase/6/docs/technotes/guides/security/jgss/lab/part1.html
+ * o http://dmdaa.wordpress.com/2010/03/13/kerberos-setup-and-jaas-configuration-for-running-sun-jgss-tutorial-against-ad/
+ * o http://docs.oracle.com/javase/6/docs/technotes/guides/security/jgss/lab/part5.html
+ * o http://stackoverflow.com/questions/1214512/how-to-get-short-domain-name-from-dns-domain-name/1214751#1214751
+ * o http://stackoverflow.com/questions/12606466/map-windows-domain-user-to-userkerberos-realm-in-java
  */
 
 import com.sun.security.auth.callback.TextCallbackHandler;
@@ -204,7 +217,12 @@ public class JaasNoFile
         Vector<String> domains = new Vector<String>();
         boolean debug = false;
         boolean verbose = false;
+
+        /** true == fudge the Realm into the environment.  Part of the not-yet-eloquent part, I was trying to avoid having to do that.  :( */
         boolean fudgeRealm = false;
+
+        /** true == fudge the KDC into the environment.  Part of the not-yet-eloquent part, I was trying to avoid having to do that.  :(
+	 */
         boolean fudgeKDC = false;
 
         String processName = "client";
@@ -255,7 +273,7 @@ public class JaasNoFile
                 String u = (String) System.getenv("USERNAME");
                 s = s.replaceAll("[^-A-Za-z0-9\\.]","");
                 d = d.toLowerCase();
-                u = u.toUpperCase();
+                //u = u.toUpperCase();
                 principals.add(u+"@"+d.toUpperCase());
                 servers.add(s);
                 servers.add(s+"."+d);
