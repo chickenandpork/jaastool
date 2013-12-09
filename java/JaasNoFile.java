@@ -27,7 +27,11 @@ import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Map;
 import java.util.Vector;
+import javax.security.auth.callback.Callback;
 import javax.security.auth.callback.CallbackHandler;
+import javax.security.auth.callback.NameCallback;
+import javax.security.auth.callback.PasswordCallback;
+import javax.security.auth.callback.UnsupportedCallbackException;
 import javax.security.auth.login.AppConfigurationEntry;
 import javax.security.auth.login.Configuration;
 import javax.security.auth.login.LoginContext;
@@ -205,6 +209,38 @@ public class JaasNoFile
         System.out.println("       "+proc+" -E gives two KDCs, one principal, and one realm, so 2 passwords will be prompted");
         System.out.println("       "+proc+" -DvE -u allan.clark -s dc01.example.com -d EXAMPLE.COM provides (2u x 3s x 2r) 12 combinations");
     }
+
+
+/**
+ * PreregisteredPasswordCallback can be used later in the callback stack in place of the Text in order to type in the user's password for him/her.  This lets a host of possibilities be tried non-interactively
+ */
+public class PreregisteredPasswordCallback implements CallbackHandler
+{
+  private String username;
+  private String password;
+
+  public PreregisteredPasswordCallback(String username, String password)
+  {
+    this.username = username;
+    this.password = password;
+  }
+
+  public void handle(Callback[] callbacks) throws UnsupportedCallbackException
+  {
+    for (Callback c: callbacks)
+    {
+      if ((c instanceof NameCallback))
+      {
+        ((NameCallback) c).setName(this.username);
+      }
+      else if ((c instanceof PasswordCallback))
+      {
+        ((PasswordCallback) c).setPassword(password.toCharArray());
+      }
+      else throw new UnsupportedCallbackException(c, "I don't know what to do with this callback");
+    }
+  }
+}
 
 
     public static void main(String[] args) throws Exception

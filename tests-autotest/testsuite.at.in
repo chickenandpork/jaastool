@@ -1,11 +1,9 @@
 AT_INIT()
 
-AT_SETUP(tool check)
+dnl AT_SETUP(tool check)
 dnl      ----------
 
-AT_TESTED([java])
-
-AT_CLEANUP()
+dnl AT_CLEANUP()
 
 
 
