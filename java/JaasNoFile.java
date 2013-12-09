@@ -108,11 +108,32 @@ public class JaasNoFile
 
 
 
+    /**
+     * loginAndAction is used to complete the work in a single step.  It's not absolutely necessary to
+     * DO something with the action once achieved, but it's a good place ot put it later for what I'm
+     * thinking of doing.  Currently, the process uses the TextCallbackHandler to ask a user for the
+     * password every time, then acquires a TGT, and under that TGT's subject, performs a priv action.
+     *
+     * @return true if succeeded, false if failed (used for main function tabulation/summarizing)
+     * @throw LoginException if the LoginContext.logout() fails to log out modules
+     * @throw PrivilegedActionException if the LoginContext.getSubject().doAs() fails in that the "action"
+     *   parameter's PrivilegedExceptionAction.run() throws a checked exception.  In this case,
+     *   TextConfirmAction.run() throws no exception.
+     *
+     * @param domain a Realm to authenticate against (Windows: Domain)
+     * @param principal a Principal to use in authentication (name of user or host; Windows: username)
+     * @param server KDC against which to attempt authentication
+     * @param password a password to use if possible
+     * @param debug whether to ask KDC libraries to verbosely describe what's going on
+     * @param verbose whether to verbosely describe what's going on in this function
+     * @param processName identifies a section of the config to use.  Use "client" for now
+     * @param action a PrivilegedExceptionAction to perform once the TGT is acquired
+     */
     boolean loginAndAction(String domain, String principal, String server, String password, boolean debug, boolean verbose, String processName, PrivilegedExceptionAction action)
     throws LoginException, PrivilegedActionException
     {
 
-        /** This handler is used as the action to take when the login context is achieved -- when we have a TGT, execute this callback (which trivially spits out a text message) */
+        /** This handler is used to request additional data */
         CallbackHandler callbackHandler = new TextCallbackHandler();
 
         LoginContext context = null;
