@@ -204,7 +204,7 @@ public class JaasNoFile
         System.out.println("     : "+proc+" [options] [--kdc|--server|-s <kdc/AD server>] [--realm|--domain|-d|-r <realm or domain>] [--principal|-u <username or principal@realm>]");
         System.out.println("   ie: "+proc+" -D -v -E");
         System.out.println("   ie: "+proc+" -DvE -u allan.clark -s dc01.example.com -d EXAMPLE.COM");
-        System.out.println("   ie: "+proc+" -DvE --princpal=allan.clark --server=dc01.example.com --domain=EXAMPLE.COM");
+        System.out.println("   ie: "+proc+" -DvE --principal=allan.clark --server=dc01.example.com --domain=EXAMPLE.COM");
         System.out.println("\n       "+proc+" will try all permutations of {principal}{domain}{server}");
         System.out.println("       "+proc+" -E gives two KDCs, one principal, and one realm, so 2 passwords will be prompted");
         System.out.println("       "+proc+" -DvE -u allan.clark -s dc01.example.com -d EXAMPLE.COM provides (2u x 3s x 2r) 12 combinations");
@@ -328,12 +328,21 @@ public class PreregisteredPasswordCallback implements CallbackHandler
                 String s = (String) System.getenv("LOGONSERVER");
                 String d = (String) System.getenv("USERDNSDOMAIN");
                 String u = (String) System.getenv("USERNAME");
+		if (null == s)
+		    System.out.println("environment \"LOGONSERVER\" is not defined");
+		else if (null == d)
+		    System.out.println("environment \"USERDNSDOMAIN\" is not defined");
+		else if (null == u)
+		    System.out.println("environment \"USERNAME\" is not defined");
+		else
+		{
                 s = s.replaceAll("[^-A-Za-z0-9\\.]","");
                 d = d.toLowerCase();
                 //u = u.toUpperCase();
                 principals.add(u+"@"+d.toUpperCase());
                 servers.add(s);
                 servers.add(s+"."+d);
+		}
 
                 fudgeKDC = true;
                 fudgeRealm = true;
