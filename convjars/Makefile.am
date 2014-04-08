@@ -1,5 +1,6 @@
 nodist_java_DATA = @PACKAGE@.jar
-javadir = $(pkgdir)
+# the following looks strange, but seems to be a way to workaround the vars changing names in autoconf versions -- where one is defined, the other is not
+javadir = $(pkgdir)$(pkgdatadir)
 
 CONFIG_CLEAN_FILES = @PACKAGE@.jar
 
