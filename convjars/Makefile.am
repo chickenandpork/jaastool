@@ -1,4 +1,5 @@
-nodist_pkgdata_DATA = @PACKAGE@.jar
+nodist_java_DATA = @PACKAGE@.jar
+javadir = $(pkgdir)
 
 CONFIG_CLEAN_FILES = @PACKAGE@.jar
 

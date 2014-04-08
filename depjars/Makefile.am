@@ -2,7 +2,7 @@ depjardir = @datadir@/@PACKAGE@/jars
 dist_depjar_DATA = $(JARS)
 
 
-EXTRA_DIST = $(nodist_pkgdata_JAVA)
+EXTRA_DIST = $(nodist_java_JAVA)
 CONFIG_CLEAN_FILES = $(JARS)
 
 AM_JAVACFLAGS= -cp $(top_builddir)/$(subdir)/$(JAVAROOT)
