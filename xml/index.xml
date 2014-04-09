@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.6">
+  <compound refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile" kind="class"><name>org::smallfoot::jaas::JaasNoFile</name>
+    <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1a728e84bb86a0c419816e1533a22b1df5" kind="function"><name>loginAndAction</name></member>
+    <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1a65d03ca5cd39f6905d34f7b0aab28f42" kind="function"><name>usage</name></member>
+    <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1a8b260eecbaabcef8473fd87ada040682" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration" kind="class"><name>org::smallfoot::jaas::JaasNoFile::NoConfFileConfiguration</name>
+    <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_1a1641ae97493d812092dc82538dfeb1d1" kind="variable"><name>appConfigurationEntry</name></member>
+    <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_1a878f50381ad49edcad4e6910f27c49ba" kind="function"><name>NoConfFileConfiguration</name></member>
+    <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_1a7b64232f7d996279c40eb859a017c11b" kind="function"><name>getAppConfigurationEntry</name></member>
+    <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_1a5f2e190b8261a98c97c2ea4e86670d54" kind="function"><name>refresh</name></member>
+  </compound>
+  <compound refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1PreregisteredPasswordCallback" kind="class"><name>org::smallfoot::jaas::JaasNoFile::PreregisteredPasswordCallback</name>
+    <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1PreregisteredPasswordCallback_1acbd76b816d055b7a642c219fd9751020" kind="variable"><name>password</name></member>
+    <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1PreregisteredPasswordCallback_1ae91c86c4d1584286de9492f51957ac23" kind="variable"><name>username</name></member>
+    <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1PreregisteredPasswordCallback_1af03808b7e0079e3e73d4850951f7a5e9" kind="function"><name>PreregisteredPasswordCallback</name></member>
+    <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1PreregisteredPasswordCallback_1a21117aca6aecc3046d9c31d604404e63" kind="function"><name>handle</name></member>
+  </compound>
+  <compound refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1TextConfirmAction" kind="class"><name>org::smallfoot::jaas::JaasNoFile::TextConfirmAction</name>
+    <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1TextConfirmAction_1a2a15165bc699c6265d5e875c6091eef5" kind="function"><name>TextConfirmAction</name></member>
+    <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1TextConfirmAction_1ac5c93e5ad399080e534ab0cfb8964fbc" kind="function"><name>run</name></member>
+  </compound>
+  <compound refid="namespaceorg" kind="namespace"><name>org</name>
+  </compound>
+  <compound refid="namespaceorg_1_1smallfoot" kind="namespace"><name>org::smallfoot</name>
+  </compound>
+  <compound refid="namespaceorg_1_1smallfoot_1_1jaas" kind="namespace"><name>org::smallfoot::jaas</name>
+  </compound>
+  <compound refid="README_8dox" kind="file"><name>README.dox</name>
+  </compound>
+  <compound refid="JaasNoFile_8java" kind="file"><name>JaasNoFile.java</name>
+  </compound>
+  <compound refid="md_htdocs_README" kind="page"><name>md_htdocs_README</name>
+  </compound>
+  <compound refid="dir_93c6ba7fb77bae0709fae89c9c13b44a" kind="dir"><name>java</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

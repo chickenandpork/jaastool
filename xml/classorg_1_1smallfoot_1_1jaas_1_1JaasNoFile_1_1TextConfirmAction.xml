@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1TextConfirmAction" kind="class" prot="package">
+    <compoundname>org::smallfoot::jaas::JaasNoFile::TextConfirmAction</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">PrivilegedExceptionAction</basecompoundref>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1TextConfirmAction_1a2a15165bc699c6265d5e875c6091eef5" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TextConfirmAction</definition>
+        <argsstring>()</argsstring>
+        <name>TextConfirmAction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="183" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="183" bodyend="185"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1TextConfirmAction_1ac5c93e5ad399080e534ab0cfb8964fbc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <exceptions> throws Exception         </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="187" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="187" bodyend="193"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="23">
+        <label>PrivilegedExceptionAction</label>
+      </node>
+      <node id="22">
+        <label>JaasNoFile.TextConfirmAction</label>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="25">
+        <label>PrivilegedExceptionAction</label>
+      </node>
+      <node id="24">
+        <label>JaasNoFile.TextConfirmAction</label>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="182" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="181" bodyend="194"/>
+    <listofallmembers>
+      <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1TextConfirmAction_1ac5c93e5ad399080e534ab0cfb8964fbc" prot="public" virt="non-virtual"><scope>org::smallfoot::jaas::JaasNoFile::TextConfirmAction</scope><name>run</name></member>
+      <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1TextConfirmAction_1a2a15165bc699c6265d5e875c6091eef5" prot="package" virt="non-virtual"><scope>org::smallfoot::jaas::JaasNoFile::TextConfirmAction</scope><name>TextConfirmAction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

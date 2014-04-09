@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration" kind="class" prot="public">
+    <compoundname>org::smallfoot::jaas::JaasNoFile::NoConfFileConfiguration</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Configuration</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_1a1641ae97493d812092dc82538dfeb1d1" prot="private" static="no" mutable="no">
+        <type>AppConfigurationEntry</type>
+        <definition>AppConfigurationEntry appConfigurationEntry</definition>
+        <argsstring></argsstring>
+        <name>appConfigurationEntry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="47" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_1a878f50381ad49edcad4e6910f27c49ba" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>NoConfFileConfiguration</definition>
+        <argsstring>(String domain, String principal, String server, String password, boolean debug)</argsstring>
+        <name>NoConfFileConfiguration</name>
+        <param>
+          <type>String</type>
+          <declname>domain</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>principal</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>server</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>password</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>debug</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="49" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="49" bodyend="95"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_1a7b64232f7d996279c40eb859a017c11b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>AppConfigurationEntry[]</type>
+        <definition>AppConfigurationEntry [] getAppConfigurationEntry</definition>
+        <argsstring>(String x)</argsstring>
+        <name>getAppConfigurationEntry</name>
+        <param>
+          <type>String</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="98" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="98" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_1a5f2e190b8261a98c97c2ea4e86670d54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void refresh</definition>
+        <argsstring>()</argsstring>
+        <name>refresh</name>
+        <briefdescription>
+<para>Interface method for reloading the configuration, which is not done in this config. </para>        </briefdescription>
+        <detaileddescription>
+<para>I&apos;m trying to provide this to avoid &quot;reloading&quot; a config that is virtual and breaking the minds of the poor machines who want to reload from disk or such. ..because disk is, like, so last week. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="109" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="109" bodyend="109"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="13">
+        <label>JaasNoFile.NoConfFileConfiguration</label>
+        <link refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Configuration</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="15">
+        <label>JaasNoFile.NoConfFileConfiguration</label>
+        <link refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>appConfigurationEntry</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>AppConfigurationEntry</label>
+      </node>
+      <node id="16">
+        <label>Configuration</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="45" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="44" bodyend="111"/>
+    <listofallmembers>
+      <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_1a1641ae97493d812092dc82538dfeb1d1" prot="private" virt="non-virtual"><scope>org::smallfoot::jaas::JaasNoFile::NoConfFileConfiguration</scope><name>appConfigurationEntry</name></member>
+      <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_1a7b64232f7d996279c40eb859a017c11b" prot="public" virt="non-virtual"><scope>org::smallfoot::jaas::JaasNoFile::NoConfFileConfiguration</scope><name>getAppConfigurationEntry</name></member>
+      <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_1a878f50381ad49edcad4e6910f27c49ba" prot="package" virt="non-virtual"><scope>org::smallfoot::jaas::JaasNoFile::NoConfFileConfiguration</scope><name>NoConfFileConfiguration</name></member>
+      <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_1a5f2e190b8261a98c97c2ea4e86670d54" prot="public" virt="non-virtual"><scope>org::smallfoot::jaas::JaasNoFile::NoConfFileConfiguration</scope><name>refresh</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

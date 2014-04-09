@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="JaasNoFile_8java" kind="file">
+    <compoundname>JaasNoFile.java</compoundname>
+    <innerclass refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile" prot="public">org::smallfoot::jaas::JaasNoFile</innerclass>
+    <innerclass refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration" prot="public">org::smallfoot::jaas::JaasNoFile::NoConfFileConfiguration</innerclass>
+    <innerclass refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1PreregisteredPasswordCallback" prot="public">org::smallfoot::jaas::JaasNoFile::PreregisteredPasswordCallback</innerclass>
+    <innerclass refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1TextConfirmAction" prot="package">org::smallfoot::jaas::JaasNoFile::TextConfirmAction</innerclass>
+    <innernamespace refid="namespaceorg_1_1smallfoot_1_1jaas">org::smallfoot::jaas</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java"/>
+  </compounddef>
+</doxygen>

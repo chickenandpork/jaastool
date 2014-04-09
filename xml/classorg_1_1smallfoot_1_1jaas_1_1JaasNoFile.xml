@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile" kind="class" prot="public">
+    <compoundname>org::smallfoot::jaas::JaasNoFile</compoundname>
+    <innerclass refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration" prot="public">org::smallfoot::jaas::JaasNoFile::NoConfFileConfiguration</innerclass>
+    <innerclass refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1PreregisteredPasswordCallback" prot="public">org::smallfoot::jaas::JaasNoFile::PreregisteredPasswordCallback</innerclass>
+    <innerclass refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1TextConfirmAction" prot="package">org::smallfoot::jaas::JaasNoFile::TextConfirmAction</innerclass>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1a728e84bb86a0c419816e1533a22b1df5" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean loginAndAction</definition>
+        <argsstring>(String domain, String principal, String server, String password, boolean debug, boolean verbose, String processName, PrivilegedExceptionAction action)</argsstring>
+        <name>loginAndAction</name>
+        <param>
+          <type>String</type>
+          <declname>domain</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>principal</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>server</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>password</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>debug</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>verbose</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>processName</declname>
+        </param>
+        <param>
+          <type>PrivilegedExceptionAction</type>
+          <declname>action</declname>
+        </param>
+        <exceptions> throws LoginException, PrivilegedActionException     </exceptions>
+        <briefdescription>
+<para>loginAndAction is used to complete the work in a single step. </para>        </briefdescription>
+        <detaileddescription>
+<para>It&apos;s not absolutely necessary to DO something with the action once achieved, but it&apos;s a good place ot put it later for what I&apos;m thinking of doing. Currently, the process uses the TextCallbackHandler to ask a user for the password every time, then acquires a TGT, and under that TGT&apos;s subject, performs a priv action.</para><para><simplesect kind="return"><para>true if succeeded, false if failed (used for main function tabulation/summarizing) </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>LoginException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the LoginContext.logout() fails to log out modules </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PrivilegedActionException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the LoginContext.getSubject().doAs() fails in that the &quot;action&quot; parameter&apos;s PrivilegedExceptionAction.run() throws a checked exception. In this case, TextConfirmAction.run() throws no exception.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>domain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a Realm to authenticate against (Windows: Domain) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>principal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a Principal to use in authentication (name of user or host; Windows: username) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>server</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>KDC against which to attempt authentication </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a password to use if possible </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>debug</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>whether to ask KDC libraries to verbosely describe what&apos;s going on </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>verbose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>whether to verbosely describe what&apos;s going on in this function </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>processName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>identifies a section of the config to use. Use &quot;client&quot; for now </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a PrivilegedExceptionAction to perform once the TGT is acquired </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>This handler is used to request additional data </para>        </inbodydescription>
+        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="136" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="136" bodyend="178"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1a65d03ca5cd39f6905d34f7b0aab28f42" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void usage</definition>
+        <argsstring>(String proc)</argsstring>
+        <name>usage</name>
+        <param>
+          <type>String</type>
+          <declname>proc</declname>
+        </param>
+        <briefdescription>
+<para>usage messages are useful to those of us with short memories as well (hey, I just need to add swap!) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="198" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="198" bodyend="211"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1a8b260eecbaabcef8473fd87ada040682" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void main</definition>
+        <argsstring>(String[] args)</argsstring>
+        <name>main</name>
+        <param>
+          <type>String[]</type>
+          <declname>args</declname>
+        </param>
+        <exceptions> throws Exception     </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>true == fudge the Realm into the environment. Part of the not-yet-eloquent part, I was trying to avoid having to do that. :(</para><para>true == fudge the KDC into the environment. Part of the not-yet-eloquent part, I was trying to avoid having to do that. :(</para>        </inbodydescription>
+        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="246" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="246" bodyend="422"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="43" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="42" bodyend="423"/>
+    <listofallmembers>
+      <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1a728e84bb86a0c419816e1533a22b1df5" prot="package" virt="non-virtual"><scope>org::smallfoot::jaas::JaasNoFile</scope><name>loginAndAction</name></member>
+      <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1a8b260eecbaabcef8473fd87ada040682" prot="public" virt="non-virtual"><scope>org::smallfoot::jaas::JaasNoFile</scope><name>main</name></member>
+      <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1a65d03ca5cd39f6905d34f7b0aab28f42" prot="public" virt="non-virtual"><scope>org::smallfoot::jaas::JaasNoFile</scope><name>usage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
