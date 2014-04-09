@@ -38,14 +38,31 @@ import javax.security.auth.login.LoginContext;
 import javax.security.auth.login.LoginException;
 import javax.security.auth.Subject;
 
-
+/**
+ * Class and main function to iterate all combinations of given values to see which can successfully authenticate to a KRB service
+ */
 public class JaasNoFile
 {
+    /**
+     * extends Configuration so that a krb5.conf is not needed; falls a bit short initially
+     * as bogusConfigBlock and libdefaults are both still needed.  This class mimicks the
+     * sections of a config file, if it existed, simulating sections of config information. 
+     * Access is controlled through the getAppConfigurationEntry() function, which metes out
+     * the included appConfigurationEntry or not based on a section value.
+     */
     public class NoConfFileConfiguration extends Configuration
     {
-
+	/** the section of a virtual config file generated using the constructor NoConfFileConfiguration(String,String,String,String,boolean) */
         private AppConfigurationEntry appConfigurationEntry;
 
+	/** Constructor generates the bogus config section appConfigurationEntry
+	 *
+	 * @param domain if the principal doesn't include the domain, it can be given here, or a null instead
+	 * @param principal the Kerberos principal to use (ie the username, or the user-at-domain separated by an "@" sign
+	 * @param server Kerberos Domain Controller (typically your Active Directory server)
+	 * @param password plaintext password to try
+	 * @param debug typically false, this gives me verbose info in case of an unusual response
+	 */
         NoConfFileConfiguration(String domain, String principal, String server, String password, boolean debug)
         {
 //System.out.println(principal+"@"+domain+" @"+server+", password: "+password);
@@ -94,7 +111,14 @@ public class JaasNoFile
             appConfigurationEntry = new AppConfigurationEntry( "com.sun.security.auth.module.Krb5LoginModule", AppConfigurationEntry.LoginModuleControlFlag.REQUIRED, bogusConfigBlock);
         }
 
-        //offer out the configuration we have stored when the login process requests
+        /**
+	 * offer out the configuration we have stored when the login process requests
+	 *
+	 * @param x name of the section being requested: "client" causes the generated seciton to be returned, an empty section otherwise
+	 * @return an AppConfigurationEntry that is either blank, or a client config block similar to "[client]" section in krb5.conf
+	 *
+	 * @sa http://web.mit.edu/kerberos/krb5-1.5/krb5-1.5/doc/krb5-admin/krb5.conf.html
+	 */
         public AppConfigurationEntry[] getAppConfigurationEntry(String x)
         {
             if (!x.equalsIgnoreCase("client"))
@@ -104,7 +128,10 @@ public class JaasNoFile
         }
 
         /**
-         * Interface method for reloading the configuration, which is not done in this config.  I'm trying to provide this to avoid "reloading" a config that is virtual and breaking the minds of the poor machines who want to reload from disk or such.  ..because disk is, like, so last week.
+         * Interface method for reloading the configuration, which is not done in this config. 
+	 * I'm trying to provide this to avoid "reloading" a config that is virtual and breaking
+	 * the minds of the poor machines who want to reload from disk or such.  ..because disk
+	 * is, like, so last week.
          */
         public void refresh() { }
 
@@ -212,19 +239,32 @@ public class JaasNoFile
 
 
 /**
- * PreregisteredPasswordCallback can be used later in the callback stack in place of the Text in order to type in the user's password for him/her.  This lets a host of possibilities be tried non-interactively
+ * PreregisteredPasswordCallback can be used later in the callback stack in place of the
+ * Text in order to type in the user's password for him/her.  This lets a host of
+ * possibilities be tried non-interactively
  */
 public class PreregisteredPasswordCallback implements CallbackHandler
 {
-  private String username;
-  private String password;
+  private String username;		/**< principal or username to use during authentication in handle(Callback[]) */
+  private String password;		/**< password (plaintext) to use during authentication in handle(Callback[]) */
 
+  /**
+   * create the local authentication record for use later in handle(Callback[])
+   *
+   * @param username principal or username to use
+   * @param password plaintext password to use
+   */
   public PreregisteredPasswordCallback(String username, String password)
   {
     this.username = username;
     this.password = password;
   }
 
+  /**
+   * Attempts to log in using the username and password supplied during constructor.
+   *
+   * @param callbacks list of callback structures which require filling in with the pre-defined data
+   */
   public void handle(Callback[] callbacks) throws UnsupportedCallbackException
   {
     for (Callback c: callbacks)
@@ -243,6 +283,13 @@ public class PreregisteredPasswordCallback implements CallbackHandler
 }
 
 
+    /**
+     * Main function, nothing to see here... this function uilds up a quick argument list
+     * with the intention if importing commandline arguments defining servers, domains/realms,
+     * usernames/principals, etc for use in hammering KDCs later.
+     *
+     * @param args commandline arguments as described in the usage(String) function
+     */
     public static void main(String[] args) throws Exception
     {
 

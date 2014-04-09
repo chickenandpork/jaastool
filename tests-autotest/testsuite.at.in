@@ -16,7 +16,7 @@ AT_CHECK([java -jar $abs_srcdir/../convjars/@PACKAGE@.jar -H], 0, [[Usage: @PACK
      : @PACKAGE@ [options] [--kdc|--server|-s <kdc/AD server>] [--realm|--domain|-d|-r <realm or domain>] [--principal|-u <username or principal@realm>]
    ie: @PACKAGE@ -D -v -E
    ie: @PACKAGE@ -DvE -u allan.clark -s dc01.example.com -d EXAMPLE.COM
-   ie: @PACKAGE@ -DvE --princpal=allan.clark --server=dc01.example.com --domain=EXAMPLE.COM
+   ie: @PACKAGE@ -DvE --principal=allan.clark --server=dc01.example.com --domain=EXAMPLE.COM
 
        @PACKAGE@ will try all permutations of {principal}{domain}{server}
        @PACKAGE@ -E gives two KDCs, one principal, and one realm, so 2 passwords will be prompted
