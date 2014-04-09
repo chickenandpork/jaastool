@@ -52,7 +52,7 @@ report the details verbosely.  There will be a summary after it's all done.
 
  o SERIOUSLY, do the password thing repeatedly until the summary.  Details are all through that text.
 
-The Sumary will tell you which principal@realm works at which servers (OK, which username@domain)
+The Sumary will tell you which principal@@realm works at which servers (OK, which username@@domain)
 
 The code is hereby pasted to allow inspection and improve trust.  Kerberos is used in secure
 environments.  I get that, so I'm "opening the trenchcoat to show nothing stashed inside".
