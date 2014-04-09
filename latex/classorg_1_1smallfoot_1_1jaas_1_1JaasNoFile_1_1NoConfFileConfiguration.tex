@@ -2,6 +2,11 @@
 \label{classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration}\index{Jaas\-No\-File.\-No\-Conf\-File\-Configuration@{Jaas\-No\-File.\-No\-Conf\-File\-Configuration}}
 
 
+extends Configuration so that a krb5.\-conf is not needed; falls a bit short initially as bogus\-Config\-Block and libdefaults are both still needed.  
+
+
+
+
 Inheritance diagram for Jaas\-No\-File.\-No\-Conf\-File\-Configuration\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -21,27 +26,58 @@ Collaboration diagram for Jaas\-No\-File.\-No\-Conf\-File\-Configuration\-:\nopa
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-App\-Configuration\-Entry[$\,$] {\bfseries get\-App\-Configuration\-Entry} (String x)\label{classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_a7b64232f7d996279c40eb859a017c11b}
-
-\item 
+App\-Configuration\-Entry[$\,$] {\bf get\-App\-Configuration\-Entry} (String x)
+\begin{DoxyCompactList}\small\item\em offer out the configuration we have stored when the login process requests \end{DoxyCompactList}\item 
 void {\bf refresh} ()
 \begin{DoxyCompactList}\small\item\em Interface method for reloading the configuration, which is not done in this config. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-App\-Configuration\-Entry {\bfseries app\-Configuration\-Entry}\label{classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_a1641ae97493d812092dc82538dfeb1d1}
+App\-Configuration\-Entry {\bf app\-Configuration\-Entry}\label{classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_a1641ae97493d812092dc82538dfeb1d1}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em the section of a virtual config file generated using the constructor No\-Conf\-File\-Configuration(\-String,\-String,\-String,\-String,boolean) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
+extends Configuration so that a krb5.\-conf is not needed; falls a bit short initially as bogus\-Config\-Block and libdefaults are both still needed. 
 
+This class mimicks the sections of a config file, if it existed, simulating sections of config information. Access is controlled through the \doxyref{get\-App\-Configuration\-Entry()}{p.}{classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_a7b64232f7d996279c40eb859a017c11b} function, which metes out the included app\-Configuration\-Entry or not based on a section value. 
 
-Definition at line 44 of file Jaas\-No\-File.\-java.
+Definition at line 53 of file Jaas\-No\-File.\-java.
 
 
 
 \subsection{Member Function Documentation}
+\index{org\-::smallfoot\-::jaas\-::\-Jaas\-No\-File\-::\-No\-Conf\-File\-Configuration@{org\-::smallfoot\-::jaas\-::\-Jaas\-No\-File\-::\-No\-Conf\-File\-Configuration}!get\-App\-Configuration\-Entry@{get\-App\-Configuration\-Entry}}
+\index{get\-App\-Configuration\-Entry@{get\-App\-Configuration\-Entry}!org::smallfoot::jaas::JaasNoFile::NoConfFileConfiguration@{org\-::smallfoot\-::jaas\-::\-Jaas\-No\-File\-::\-No\-Conf\-File\-Configuration}}
+\subsubsection[{get\-App\-Configuration\-Entry}]{\setlength{\rightskip}{0pt plus 5cm}App\-Configuration\-Entry [$\,$] get\-App\-Configuration\-Entry (
+\begin{DoxyParamCaption}
+\item[{String}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_a7b64232f7d996279c40eb859a017c11b}
+
+
+offer out the configuration we have stored when the login process requests 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & name of the section being requested\-: \char`\"{}client\char`\"{} causes the generated seciton to be returned, an empty section otherwise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an App\-Configuration\-Entry that is either blank, or a client config block similar to \char`\"{}[client]\char`\"{} section in krb5.\-conf
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+{\tt http\-://web.\-mit.\-edu/kerberos/krb5-\/1.\-5/krb5-\/1.\-5/doc/krb5-\/admin/krb5.\-conf.\-html} 
+\end{DoxySeeAlso}
+
+
+Definition at line 122 of file Jaas\-No\-File.\-java.
+
+
+
+References Jaas\-No\-File.\-No\-Conf\-File\-Configuration.\-app\-Configuration\-Entry.
+
 \index{org\-::smallfoot\-::jaas\-::\-Jaas\-No\-File\-::\-No\-Conf\-File\-Configuration@{org\-::smallfoot\-::jaas\-::\-Jaas\-No\-File\-::\-No\-Conf\-File\-Configuration}!refresh@{refresh}}
 \index{refresh@{refresh}!org::smallfoot::jaas::JaasNoFile::NoConfFileConfiguration@{org\-::smallfoot\-::jaas\-::\-Jaas\-No\-File\-::\-No\-Conf\-File\-Configuration}}
 \subsubsection[{refresh}]{\setlength{\rightskip}{0pt plus 5cm}void refresh (
@@ -55,7 +91,7 @@ Interface method for reloading the configuration, which is not done in this conf
 
 I'm trying to provide this to avoid \char`\"{}reloading\char`\"{} a config that is virtual and breaking the minds of the poor machines who want to reload from disk or such. ..because disk is, like, so last week. 
 
-Definition at line 109 of file Jaas\-No\-File.\-java.
+Definition at line 136 of file Jaas\-No\-File.\-java.
 
 
 

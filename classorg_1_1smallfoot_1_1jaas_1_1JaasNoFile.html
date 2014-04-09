@@ -73,10 +73,14 @@ $(document).ready(function(){initNavTree('classorg_1_1smallfoot_1_1jaas_1_1JaasN
 <div class="title">JaasNoFile Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class and main function to iterate all combinations of given values to see which can successfully authenticate to a KRB service.  
+ <a href="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration.html">NoConfFileConfiguration</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">extends Configuration so that a krb5.conf is not needed; falls a bit short initially as bogusConfigBlock and libdefaults are both still needed.  <a href="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1PreregisteredPasswordCallback.html">PreregisteredPasswordCallback</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1PreregisteredPasswordCallback.html" title="PreregisteredPasswordCallback can be used later in the callback stack in place of the Text in order t...">PreregisteredPasswordCallback</a> can be used later in the callback stack in place of the Text in order to type in the user's password for him/her.  <a href="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1PreregisteredPasswordCallback.html#details">More...</a><br/></td></tr>
@@ -94,11 +98,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a8b260eecbaabcef8473fd87ada040682"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile.html#a8b260eecbaabcef8473fd87ada040682">main</a> (String[] args)  throws Exception     </td></tr>
+<tr class="memdesc:a8b260eecbaabcef8473fd87ada040682"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function, nothing to see here...  <a href="#a8b260eecbaabcef8473fd87ada040682">More...</a><br/></td></tr>
 <tr class="separator:a8b260eecbaabcef8473fd87ada040682"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="JaasNoFile_8java_source.html#l00042">42</a> of file <a class="el" href="JaasNoFile_8java_source.html">JaasNoFile.java</a>.</p>
+<div class="textblock"><p>Class and main function to iterate all combinations of given values to see which can successfully authenticate to a KRB service. </p>
+
+<p>Definition at line <a class="el" href="JaasNoFile_8java_source.html#l00044">44</a> of file <a class="el" href="JaasNoFile_8java_source.html">JaasNoFile.java</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a8b260eecbaabcef8473fd87ada040682"></a>
 <div class="memitem">
@@ -121,10 +127,19 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Main function, nothing to see here... </p>
+<p>this function uilds up a quick argument list with the intention if importing commandline arguments defining servers, domains/realms, usernames/principals, etc for use in hammering KDCs later.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>commandline arguments as described in the <a class="el" href="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile.html#a65d03ca5cd39f6905d34f7b0aab28f42" title="usage messages are useful to those of us with short memories as well (hey, I just need to add swap!) ...">usage(String)</a> function </td></tr>
+  </table>
+  </dd>
+</dl>
 <p>true == fudge the Realm into the environment. Part of the not-yet-eloquent part, I was trying to avoid having to do that. :(</p>
 <p>true == fudge the KDC into the environment. Part of the not-yet-eloquent part, I was trying to avoid having to do that. :(</p>
 
-<p>Definition at line <a class="el" href="JaasNoFile_8java_source.html#l00246">246</a> of file <a class="el" href="JaasNoFile_8java_source.html">JaasNoFile.java</a>.</p>
+<p>Definition at line <a class="el" href="JaasNoFile_8java_source.html#l00293">293</a> of file <a class="el" href="JaasNoFile_8java_source.html">JaasNoFile.java</a>.</p>
 
 </div>
 </div>
@@ -137,7 +152,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>org</b></li><li class="navelem"><b>smallfoot</b></li><li class="navelem"><b>jaas</b></li><li class="navelem"><a class="el" href="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile.html">JaasNoFile</a></li>
-    <li class="footer">Generated on Wed Apr 9 2014 13:01:42 for jaastool by
+    <li class="footer">Generated on Wed Apr 9 2014 13:45:07 for jaastool by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -1,10 +1,15 @@
 \section{Jaas\-No\-File Class Reference}
 \label{classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile}\index{Jaas\-No\-File@{Jaas\-No\-File}}
+
+
+Class and main function to iterate all combinations of given values to see which can successfully authenticate to a K\-R\-B service.  
+
+
 \subsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 class {\bf No\-Conf\-File\-Configuration}
-\item 
+\begin{DoxyCompactList}\small\item\em extends Configuration so that a krb5.\-conf is not needed; falls a bit short initially as bogus\-Config\-Block and libdefaults are both still needed. \end{DoxyCompactList}\item 
 class {\bf Preregistered\-Password\-Callback}
 \begin{DoxyCompactList}\small\item\em \doxyref{Preregistered\-Password\-Callback}{p.}{classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1PreregisteredPasswordCallback} can be used later in the callback stack in place of the Text in order to type in the user's password for him/her. \end{DoxyCompactList}\item 
 class {\bfseries Text\-Confirm\-Action}
@@ -19,13 +24,13 @@ void {\bf usage} (String proc)\label{classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile
 \begin{DoxyCompactItemize}
 \item 
 static void {\bf main} (String[$\,$] args)  throws Exception     
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Main function, nothing to see here... \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
+Class and main function to iterate all combinations of given values to see which can successfully authenticate to a K\-R\-B service. 
 
-
-Definition at line 42 of file Jaas\-No\-File.\-java.
+Definition at line 44 of file Jaas\-No\-File.\-java.
 
 
 
@@ -37,11 +42,22 @@ Definition at line 42 of file Jaas\-No\-File.\-java.
 \item[{String[$\,$]}]{args}
 \end{DoxyParamCaption}
 ) throws Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_a8b260eecbaabcef8473fd87ada040682}
+
+
+Main function, nothing to see here... 
+
+this function uilds up a quick argument list with the intention if importing commandline arguments defining servers, domains/realms, usernames/principals, etc for use in hammering K\-D\-Cs later.
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & commandline arguments as described in the \doxyref{usage(\-String)}{p.}{classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_a65d03ca5cd39f6905d34f7b0aab28f42} function \\
+\hline
+\end{DoxyParams}
 true == fudge the Realm into the environment. Part of the not-\/yet-\/eloquent part, I was trying to avoid having to do that. \-:(
 
 true == fudge the K\-D\-C into the environment. Part of the not-\/yet-\/eloquent part, I was trying to avoid having to do that. \-:(
 
-Definition at line 246 of file Jaas\-No\-File.\-java.
+Definition at line 293 of file Jaas\-No\-File.\-java.
 
 
 

@@ -10,12 +10,13 @@
         <argsstring></argsstring>
         <name>appConfigurationEntry</name>
         <briefdescription>
-        </briefdescription>
+<para>the section of a virtual config file generated using the constructor NoConfFileConfiguration(String,String,String,String,boolean) </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="47" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="47" bodyend="-1"/>
+        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="56" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="56" bodyend="-1"/>
+        <referencedby refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_1a7b64232f7d996279c40eb859a017c11b" compoundref="JaasNoFile_8java" startline="122" endline="128">JaasNoFile.NoConfFileConfiguration.getAppConfigurationEntry</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="package-func">
@@ -45,12 +46,48 @@
           <declname>debug</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Constructor generates the bogus config section appConfigurationEntry. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>domain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the principal doesn&apos;t include the domain, it can be given here, or a null instead </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>principal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Kerberos principal to use (ie the username, or the user-at-domain separated by an &quot;@&quot; sign </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>server</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kerberos Domain Controller (typically your Active Directory server) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>plaintext password to try </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>debug</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>typically false, this gives me verbose info in case of an unusual response </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="49" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="49" bodyend="95"/>
+        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="66" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="66" bodyend="112"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -64,12 +101,23 @@
           <declname>x</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>offer out the configuration we have stored when the login process requests </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the section being requested: &quot;client&quot; causes the generated seciton to be returned, an empty section otherwise </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>an AppConfigurationEntry that is either blank, or a client config block similar to &quot;[client]&quot; section in krb5.conf</para></simplesect>
+<simplesect kind="see"><para><ulink url="http://web.mit.edu/kerberos/krb5-1.5/krb5-1.5/doc/krb5-admin/krb5.conf.html">http://web.mit.edu/kerberos/krb5-1.5/krb5-1.5/doc/krb5-admin/krb5.conf.html</ulink> </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="98" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="98" bodyend="104"/>
+        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="122" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="122" bodyend="128"/>
+        <references refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_1a1641ae97493d812092dc82538dfeb1d1" compoundref="JaasNoFile_8java" startline="56">JaasNoFile.NoConfFileConfiguration.appConfigurationEntry</references>
       </memberdef>
       <memberdef kind="function" id="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_1a5f2e190b8261a98c97c2ea4e86670d54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -82,13 +130,13 @@
 <para>I&apos;m trying to provide this to avoid &quot;reloading&quot; a config that is virtual and breaking the minds of the poor machines who want to reload from disk or such. ..because disk is, like, so last week. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="109" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="109" bodyend="109"/>
+        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="136" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="136" bodyend="136"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>extends Configuration so that a krb5.conf is not needed; falls a bit short initially as bogusConfigBlock and libdefaults are both still needed. </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para>This class mimicks the sections of a config file, if it existed, simulating sections of config information. Access is controlled through the <ref refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_1a7b64232f7d996279c40eb859a017c11b" kindref="member">getAppConfigurationEntry()</ref> function, which metes out the included appConfigurationEntry or not based on a section value. </para>    </detaileddescription>
     <inheritancegraph>
       <node id="13">
         <label>JaasNoFile.NoConfFileConfiguration</label>
@@ -117,7 +165,7 @@
         <label>Configuration</label>
       </node>
     </collaborationgraph>
-    <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="45" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="44" bodyend="111"/>
+    <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="54" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="53" bodyend="138"/>
     <listofallmembers>
       <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_1a1641ae97493d812092dc82538dfeb1d1" prot="private" virt="non-virtual"><scope>org::smallfoot::jaas::JaasNoFile::NoConfFileConfiguration</scope><name>appConfigurationEntry</name></member>
       <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_1a7b64232f7d996279c40eb859a017c11b" prot="public" virt="non-virtual"><scope>org::smallfoot::jaas::JaasNoFile::NoConfFileConfiguration</scope><name>getAppConfigurationEntry</name></member>

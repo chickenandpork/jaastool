@@ -123,7 +123,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
 <para>This handler is used to request additional data </para>        </inbodydescription>
-        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="136" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="136" bodyend="178"/>
+        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="163" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="163" bodyend="205"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -142,7 +142,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="198" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="198" bodyend="211"/>
+        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="225" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="225" bodyend="238"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -157,19 +157,27 @@
         </param>
         <exceptions> throws Exception     </exceptions>
         <briefdescription>
-        </briefdescription>
+<para>Main function, nothing to see here... </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>this function uilds up a quick argument list with the intention if importing commandline arguments defining servers, domains/realms, usernames/principals, etc for use in hammering KDCs later.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>commandline arguments as described in the <ref refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1a65d03ca5cd39f6905d34f7b0aab28f42" kindref="member">usage(String)</ref> function </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
 <para>true == fudge the Realm into the environment. Part of the not-yet-eloquent part, I was trying to avoid having to do that. :(</para><para>true == fudge the KDC into the environment. Part of the not-yet-eloquent part, I was trying to avoid having to do that. :(</para>        </inbodydescription>
-        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="246" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="246" bodyend="422"/>
+        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="293" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="293" bodyend="469"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Class and main function to iterate all combinations of given values to see which can successfully authenticate to a KRB service. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="43" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="42" bodyend="423"/>
+    <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="45" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="44" bodyend="470"/>
     <listofallmembers>
       <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1a728e84bb86a0c419816e1533a22b1df5" prot="package" virt="non-virtual"><scope>org::smallfoot::jaas::JaasNoFile</scope><name>loginAndAction</name></member>
       <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1a8b260eecbaabcef8473fd87ada040682" prot="public" virt="non-virtual"><scope>org::smallfoot::jaas::JaasNoFile</scope><name>main</name></member>
