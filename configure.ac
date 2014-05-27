@@ -31,7 +31,7 @@ AC_SUBST(BUILDID)
 AC_PATH_PROGS(RPMBUILD, [rpmbuild], [missing rpmbuild])
 AM_CONDITIONAL(HAVE_RPMBUILD, [test "x$RPMBUILD" != "xmissing rpmbuild"])
 
-SVN_CHECK_JDK([1.6.0])
+SVN_CHECK_JDK([1.6],[1.6])
 AM_CONDITIONAL(DO_JAVA, test "$JAVAC" != none)
 
 AC_ARG_ENABLE(autotest,

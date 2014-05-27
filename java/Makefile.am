@@ -7,7 +7,7 @@ javadir = $(pkgdir)
 EXTRA_DIST = $(nodist_java_JAVA)
 CONFIG_CLEAN_FILES = @PACKAGE@.jar
 
-AM_JAVACFLAGS= -cp $(JAVAROOT):$(top_builddir)/depjars/getopt.jar
+AM_JAVACFLAGS= @JAVAC_FLAGS@ -cp $(JAVAROOT):$(top_builddir)/depjars/getopt.jar
 
 BUILDTMP=$(shell date +%s)
 BUILT_SOURCES =
