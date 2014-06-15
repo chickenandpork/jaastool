@@ -25,7 +25,18 @@ CHECK_DOXYGEN(pkg/Doxyfile.in)
 AC_PATH_PROGS(ASTYLE, [astyle], missing, $PATH:$HOME/bin)
 AM_CONDITIONAL(DO_ASTYLE, test "x$ASTYLE" != "xmissing")
 
-BUILDID=0
+AC_CHECK_PROG(GIT, [git], [git],[missing git])
+AM_CONDITIONAL(DO_GITFORMATTING, test "$GIT" != "missing git" -a -f .git/config)
+
+AC_MSG_CHECKING([version agreement with git tag])
+BUILDID=$( (git describe; cat gitdescribe) 2>/dev/null |head -1| cut -d "-" -f 2)
+CHKVER=$( (git describe; cat gitdescribe) 2>/dev/null |head -1| cut -d "-" -f 1)
+if test "${CHKVER}" = "${VERSION}"
+then
+  AC_MSG_RESULT([ok])
+else
+  AC_MSG_WARN([version mismatch])
+fi
 AC_SUBST(BUILDID)
 
 AC_PATH_PROGS(RPMBUILD, [rpmbuild], [missing rpmbuild])
@@ -68,7 +79,7 @@ AC_SUBST([GETOPTJAR], ${WITH_GETOPTJAR})
 
 AC_CONFIG_FILES(Makefile
   depjars/Makefile
-  java/Makefile
+  java/Makefile java/JaasNoFile.java
   tests-autotest/Makefile tests-autotest/atlocal tests-autotest/testsuite.at
   convjars/Makefile
 )

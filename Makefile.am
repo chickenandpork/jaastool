@@ -16,7 +16,7 @@ endif
 
 # if missing mkinstalldirs install-sh trigger errors, ignore the result code on the "system (cp ...)" command in automake
 CONFIG_CLEAN_FILES = aclocal.m4 config.guess config.sub config.h config.h.in ltconfig ltmain.sh missing mkinstalldirs install-sh Doxyfile @PACKAGE@.spec @PACKAGE@.jar changes.atom
-EXTRA_DIST = @PACKAGE@.spec
+EXTRA_DIST = @PACKAGE@.spec gitdescribe
 
 ACLOCAL_AMFLAGS = -I m4
 
@@ -54,6 +54,11 @@ git-formatting:
 	echo git push
 	echo git dcommit
 endif
+
+if DO_GITFORMATTING
+gitdescribe: .git/index
+	git describe > $@
+endif DO_GITFORMATTING
 
 
 if HAVE_RPMBUILD

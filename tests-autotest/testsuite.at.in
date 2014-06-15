@@ -28,6 +28,17 @@ AT_CLEANUP()
 
 
 
+AT_SETUP(Version Output)
+dnl      --------------
+
+AT_CHECK([java -jar $abs_srcdir/../convjars/@PACKAGE@.jar -V], 0, [Version @VERSION@-@BUILDID@ http://github.com/chickenandpork/jaastools
+], [])
+
+AT_CHECK([java -jar $abs_srcdir/../convjars/@PACKAGE@.jar --version], 0, [Version @VERSION@-@BUILDID@ http://github.com/chickenandpork/jaastools
+], [])
+
+AT_CLEANUP()
+
 
 
 AT_SETUP(Doxygen confirmation of marked-up content)

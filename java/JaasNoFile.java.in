@@ -73,7 +73,7 @@ public class JaasNoFile
             // since this uses the Krb5LoginModule, a great resource can be found at: http://docs.oracle.com/javase/7/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html
             if (debug)
                 bogusConfigBlock.put("debug","true");
-            //bogusConfigBlock.put("tryFirstPass","true"); --> should have user/pass in config first
+            //bogusConfigBlock.put("tryFirstPass","true"); //--> should have user/pass in config first
             //bogusConfigBlock.put("principal","allanc"); --> causes prompt for principal (defaulted to username) to be skipped
 
             // HADOOP-7489: -Djava.security.krb5.realm=OX.AC.UK -Djava.security.krb5.kdc=kdc0.ox.ac.uk:kdc1.ox.ac.uk
@@ -337,8 +337,14 @@ public class PreregisteredPasswordCallback implements CallbackHandler
             switch(c)
             {
             case 'P': /* prompt for and store a password */
-                if (null != g.getOptarg())
-                    passwords.add(g.getOptarg());
+	    {
+		java.io.Console console;
+
+		if (null != g.getOptarg())
+		    passwords.add(g.getOptarg());
+		else if (null != (console = System.console()))
+		    passwords.add(new String(console.readPassword("password to try:")));
+            }
                 break;
 
             case 'r': /* fallthru */
@@ -408,7 +414,7 @@ public class PreregisteredPasswordCallback implements CallbackHandler
                      */
             case 'V':   // print the version and quit
             {
-                System.out.println("Version 1.0 http://github.com/chickenandpork/jaastools");
+                System.out.println("Version @VERSION@-@BUILDID@ http://github.com/chickenandpork/jaastools");
                 return;
             }
 
@@ -435,6 +441,7 @@ public class PreregisteredPasswordCallback implements CallbackHandler
         }
 
         // if no password given, give it a null, and the underlying will ask
+System.out.println("have "+passwords.size()+" passwords");
         if (1 > passwords.size()) passwords.add(null);
 
         // if no domain given, give it a null, and the underlying will use default
