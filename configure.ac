@@ -80,6 +80,7 @@ AC_SUBST([GETOPTJAR], ${WITH_GETOPTJAR})
 AC_CONFIG_FILES(Makefile
   depjars/Makefile
   java/Makefile java/JaasNoFile.java
+  pkg/msdos/Makefile
   tests-autotest/Makefile tests-autotest/atlocal tests-autotest/testsuite.at
   convjars/Makefile
 )

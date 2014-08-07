@@ -23,3 +23,12 @@ Makefile.in
 /install-sh
 /missing
 gitdescribe
+
+# build process
+jaastool-1.0.tar.bz2
+jaastool-1.0.tar.gz
+jaastool.spec
+java/JaasNoFile.java
+java/classjava.stamp
+tests-autotest/package.m4
+tests-autotest/testsuite.log

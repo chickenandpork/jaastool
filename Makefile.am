@@ -5,7 +5,7 @@ if DO_JAVA
 SUBDIRS += java
 
 # always must be after any java dirs -- acts as a collector
-SUBDIRS += convjars
+SUBDIRS += convjars pkg/msdos
 endif
 
 # always after any builds and after conv(enience)jars: need to test that the convjars work in isolation
@@ -17,7 +17,7 @@ endif
 # if missing mkinstalldirs install-sh trigger errors, ignore the result code on the "system (cp ...)" command in automake
 CONFIG_CLEAN_FILES = aclocal.m4 config.guess config.sub config.h config.h.in ltconfig ltmain.sh missing mkinstalldirs install-sh Doxyfile @PACKAGE@.spec @PACKAGE@.jar changes.atom
 CONFIG_STATUS_DEPENDENCIES = gitdescribe
-EXTRA_DIST = @PACKAGE@.spec gitdescribe
+EXTRA_DIST = @PACKAGE@.spec gitdescribe pkg/msdos/jaastool.bat
 
 ACLOCAL_AMFLAGS = -I m4
 
@@ -44,7 +44,7 @@ endif
 
 
 if DO_ASTYLE
-formatting: java/JaasNoFile.java
+formatting: java/JaasNoFile.java.in
 	$(MAKE) check
 	for i in $^; do $(ASTYLE) -A1 $$i; done
 	$(MAKE) check
