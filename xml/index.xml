@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.6">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.7">
   <compound refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile" kind="class"><name>org::smallfoot::jaas::JaasNoFile</name>
     <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1a728e84bb86a0c419816e1533a22b1df5" kind="function"><name>loginAndAction</name></member>
     <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1a65d03ca5cd39f6905d34f7b0aab28f42" kind="function"><name>usage</name></member>

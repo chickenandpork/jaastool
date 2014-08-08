@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
   <compounddef id="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration" kind="class" prot="public">
     <compoundname>org::smallfoot::jaas::JaasNoFile::NoConfFileConfiguration</compoundname>
     <basecompoundref prot="public" virt="non-virtual">Configuration</basecompoundref>
@@ -16,7 +16,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="56" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="56" bodyend="-1"/>
-        <referencedby refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_1a7b64232f7d996279c40eb859a017c11b" compoundref="JaasNoFile_8java" startline="122" endline="128">JaasNoFile.NoConfFileConfiguration.getAppConfigurationEntry</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="package-func">
@@ -117,7 +116,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="122" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="122" bodyend="128"/>
-        <references refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_1a1641ae97493d812092dc82538dfeb1d1" compoundref="JaasNoFile_8java" startline="56">JaasNoFile.NoConfFileConfiguration.appConfigurationEntry</references>
       </memberdef>
       <memberdef kind="function" id="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration_1a5f2e190b8261a98c97c2ea4e86670d54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>

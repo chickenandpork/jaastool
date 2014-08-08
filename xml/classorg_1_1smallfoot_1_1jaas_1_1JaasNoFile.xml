@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
   <compounddef id="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile" kind="class" prot="public">
     <compoundname>org::smallfoot::jaas::JaasNoFile</compoundname>
     <innerclass refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1_1NoConfFileConfiguration" prot="public">org::smallfoot::jaas::JaasNoFile::NoConfFileConfiguration</innerclass>
@@ -143,6 +143,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="225" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="225" bodyend="238"/>
+        <referencedby refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1a8b260eecbaabcef8473fd87ada040682" compoundref="JaasNoFile_8java" startline="293" endline="476">JaasNoFile.main</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -170,14 +171,15 @@
 </para>        </detaileddescription>
         <inbodydescription>
 <para>true == fudge the Realm into the environment. Part of the not-yet-eloquent part, I was trying to avoid having to do that. :(</para><para>true == fudge the KDC into the environment. Part of the not-yet-eloquent part, I was trying to avoid having to do that. :(</para>        </inbodydescription>
-        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="293" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="293" bodyend="469"/>
+        <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="293" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="293" bodyend="476"/>
+        <references refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1a65d03ca5cd39f6905d34f7b0aab28f42" compoundref="JaasNoFile_8java" startline="225" endline="238">JaasNoFile.usage</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Class and main function to iterate all combinations of given values to see which can successfully authenticate to a KRB service. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="45" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="44" bodyend="470"/>
+    <location file="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" line="45" column="1" bodyfile="/Users/allan.clark/src/jaastool/java/JaasNoFile.java" bodystart="44" bodyend="477"/>
     <listofallmembers>
       <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1a728e84bb86a0c419816e1533a22b1df5" prot="package" virt="non-virtual"><scope>org::smallfoot::jaas::JaasNoFile</scope><name>loginAndAction</name></member>
       <member refid="classorg_1_1smallfoot_1_1jaas_1_1JaasNoFile_1a8b260eecbaabcef8473fd87ada040682" prot="public" virt="non-virtual"><scope>org::smallfoot::jaas::JaasNoFile</scope><name>main</name></member>

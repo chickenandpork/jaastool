@@ -1,10 +1,10 @@
 \section*{jaastool }
 
-J\-A\-A\-S Tools used to aid diagnosing opaque issues
+J\+A\+A\+S Tools used to aid diagnosing opaque issues
 
-B\-U\-I\-L\-D\-I\-N\-G
+B\+U\+I\+L\+D\+I\+N\+G
 
-This is a standard Auto\-Tools build, so\-:
+This is a standard Auto\+Tools build, so\+:
 
 1) autoreconf -\/vfi
 
@@ -12,33 +12,33 @@ This is a standard Auto\-Tools build, so\-:
 
 3) make rpm (if so inclined)
 
-java/jaastool.\-jar is the proper built jar file; convjars is where \char`\"{}convenience jars\char`\"{} are built if you're less concerned with license purity and more concerned with\-:
+java/jaastool.\+jar is the proper built jar file; convjars is where \char`\"{}convenience jars\char`\"{} are built if you're less concerned with license purity and more concerned with\+:
 
 1) your tests are bogus. Let me test exactly what you tested; or
 
 2) I need it working like yesterday. Holy crap please help me. Gimme something to download immediately to make the pain stop.
 
-We've all been there. In both cases. grab convjars/jaastool.\-jar, it's not sanitary, but it works.
+We've all been there. In both cases. grab convjars/jaastool.\+jar, it's not sanitary, but it works.
 
-U\-S\-A\-G\-E
+U\+S\+A\+G\+E
 
-The only portion right is the \doxyref{Jaas\-No\-File.\-java}{p.}{JaasNoFile_8java_source} which nearly works as eloquently as implied. I use it for trying to see why a Kerberos client who shall remain nameless (V\-W-\/3) is not getting a clear result from the Kerberos server and/or not logging the full story. Also, said client is a great product, but in cases of customer doubt or dialect/terminology skew, this utility is a third-\/party to that argument. \begin{DoxyVerb}java -jar jaastool.jar -E
+The only portion right is the \doxyref{Jaas\+No\+File.\+java}{p.}{JaasNoFile_8java_source} which nearly works as eloquently as implied. I use it for trying to see why a Kerberos client who shall remain nameless (V\+W-\/3) is not getting a clear result from the Kerberos server and/or not logging the full story. Also, said client is a great product, but in cases of customer doubt or dialect/terminology skew, this utility is a third-\/party to that argument. \begin{DoxyVerb}java -jar jaastool.jar -E
 \end{DoxyVerb}
 
 
-For more detail\-: \begin{DoxyVerb}java -jar jaastool.jar -EDv
+For more detail\+: \begin{DoxyVerb}java -jar jaastool.jar -EDv
 \end{DoxyVerb}
 
 
-Jaas\-Tool will then grab your username and domain as Principal and Realm, hit your L\-O\-G\-O\-N\-S\-E\-R\-V\-E\-R, and report the details verbosely. There will be a summary after it's all done.
+Jaas\+Tool will then grab your username and domain as Principal and Realm, hit your L\+O\+G\+O\+N\+S\+E\+R\+V\+E\+R, and report the details verbosely. There will be a summary after it's all done.
 
-o You'll be asked multiple times for your password. Don't worry, to avoid storing it, Jaas\-Tool re-\/asks.
+o You'll be asked multiple times for your password. Don't worry, to avoid storing it, Jaas\+Tool re-\/asks.
 
 o There will be a lot of java exception and Kerberos stuff. Don't worry, just wait for the summary at the end
 
-o S\-E\-R\-I\-O\-U\-S\-L\-Y, do the password thing repeatedly until the summary. Details are all through that text.
+o S\+E\+R\+I\+O\+U\+S\+L\+Y, do the password thing repeatedly until the summary. Details are all through that text.
 
-The Sumary will tell you which principal@realm works at which servers (O\-K, which username@domain)
+The Sumary will tell you which principal@realm works at which servers (O\+K, which username@domain)
 
 The code is hereby pasted to allow inspection and improve trust. Kerberos is used in secure environments. I get that, so I'm \char`\"{}opening the trenchcoat to show nothing stashed inside\char`\"{}.
 
